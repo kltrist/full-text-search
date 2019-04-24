@@ -1,0 +1,17 @@
+<dataConfig>
+    <dataSource type="JdbcDataSource"
+                driver="com.mysql.cj.jdbc.Driver"
+                url="jdbc:mysql://localhost:3306/data?serverTimezone=UTC"
+                user="root"
+                password="your_pass"/>
+    <document>
+        <entity name="doc"
+                pk="id"
+                query="select id,file_name,text from documents">
+
+            <field column="id" name="id"/>
+            <field column="file_name" name="file_name"/>
+            <field column="text" name="text"/>
+        </entity>
+    </document>
+</dataConfig>
