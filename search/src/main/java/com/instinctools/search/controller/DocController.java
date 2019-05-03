@@ -28,8 +28,6 @@ public class DocController {
     public Iterable<String> getDocsIdBySentence(@RequestParam(name = "q") String sentence) {
         ArrayList<String> ids = new ArrayList<>();
         Iterable<Doc> docs = service.findSentence(sentence);
-        int maxEntryCount =0;
-
         docs.forEach((Doc d) -> ids.add(d.getId()));
         return ids;
     }
